@@ -11,19 +11,21 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/20"></div>
+    <section id="home" className="min-h-screen relative overflow-hidden bg-background">
+      {/* Geometric Background Elements */}
+      <div className="geometric-shape top-10 right-20 w-32 h-32 rotate-45"></div>
+      <div className="geometric-shape top-1/3 left-10 w-20 h-20 rotate-12"></div>
+      <div className="geometric-shape bottom-20 right-1/3 w-28 h-28 -rotate-12"></div>
       
       {/* Floating Elements */}
       <div className="floating-element top-20 right-10 w-24 h-24 flex items-center justify-center">
-        <span className="text-xs text-center">Data Science<br />Student</span>
+        <span className="text-xs text-center font-semibold">Data Science<br />Student</span>
       </div>
       <div className="floating-element top-1/3 left-10 w-20 h-20 flex items-center justify-center">
-        <span className="text-xs text-center">ML<br />Enthusiast</span>
+        <span className="text-xs text-center font-semibold">ML<br />Enthusiast</span>
       </div>
       <div className="floating-element bottom-1/4 right-1/4 w-28 h-28 flex items-center justify-center">
-        <span className="text-xs text-center">Web<br />Developer</span>
+        <span className="text-xs text-center font-semibold">Web<br />Developer</span>
       </div>
 
       <div className="relative section-padding flex items-center min-h-screen">
@@ -85,19 +87,19 @@ const Hero = () => {
             {/* Profile Image */}
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
+                <div className="image-frame w-80 h-80 lg:w-96 lg:h-96 shadow-2xl">
                   <img 
                     src={profilePicture}
                     alt="Yaddanapudi Vardhini"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover relative z-20"
                   />
                 </div>
                 
                 {/* Floating Achievement Elements */}
-                <div className="absolute -top-4 -left-4 floating-element w-16 h-16 flex items-center justify-center">
+                <div className="absolute -top-4 -left-4 floating-element w-16 h-16 flex items-center justify-center z-30">
                   <span className="text-xs text-center font-bold">4th<br />Year</span>
                 </div>
-                <div className="absolute -bottom-4 -right-4 floating-element w-20 h-20 flex items-center justify-center">
+                <div className="absolute -bottom-4 -right-4 floating-element w-20 h-20 flex items-center justify-center z-30">
                   <span className="text-xs text-center font-bold">82%<br />CGPA</span>
                 </div>
               </div>

@@ -8,58 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 20% 8%;
-    --foreground: 220 15% 95%;
+    --background: 0 0% 98%;
+    --foreground: 240 10% 15%;
 
-    --card: 220 20% 10%;
-    --card-foreground: 220 15% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
 
-    --primary: 267 83% 70%;
-    --primary-foreground: 220 20% 8%;
+    --primary: 0 72% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 85% 55%;
-    --secondary-foreground: 220 20% 8%;
+    --secondary: 267 83% 70%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 45%;
 
-    --accent: 267 83% 70%;
-    --accent-foreground: 220 20% 8%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 267 83% 70%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 0 72% 60%;
 
-    --radius: 1rem;
+    --radius: 1.5rem;
 
     /* Portfolio-specific tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(220 20% 8%), hsl(267 50% 20%));
-    --card-glow: 0 0 40px hsl(267 83% 70% / 0.1);
-    --floating-shadow: 0 20px 60px hsl(267 83% 70% / 0.2);
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 98%), hsl(267 50% 95%));
+    --card-glow: 0 8px 32px hsl(267 83% 70% / 0.1);
+    --floating-shadow: 0 20px 60px hsl(0 72% 60% / 0.15);
     --text-glow: 0 0 20px hsl(267 83% 70% / 0.3);
-    --gradient-accent: linear-gradient(135deg, hsl(267 83% 70%), hsl(200 85% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(267 83% 70%), hsl(0 72% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(267 83% 70%), hsl(38 92% 50%));
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -84,26 +78,41 @@ All colors MUST be HSL.
 
 @layer components {
   .floating-element {
-    @apply absolute bg-gradient-to-br from-primary to-secondary rounded-full p-4 text-sm font-medium text-primary-foreground shadow-2xl;
+    @apply absolute rounded-3xl p-4 text-sm font-medium text-white shadow-lg;
+    background: var(--gradient-primary);
     box-shadow: var(--floating-shadow);
     animation: float 6s ease-in-out infinite;
   }
 
+  .geometric-shape {
+    @apply absolute rounded-3xl;
+    background: var(--gradient-primary);
+    opacity: 0.1;
+  }
+
   .hero-text {
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: var(--text-glow);
+    @apply text-foreground font-bold;
   }
 
   .glass-card {
-    @apply backdrop-blur-sm bg-card/60 border border-border/50;
+    @apply bg-card border border-border shadow-lg;
     box-shadow: var(--card-glow);
   }
 
   .section-padding {
     @apply py-20 px-6 md:px-12 lg:px-20;
+  }
+
+  .image-frame {
+    @apply relative overflow-hidden rounded-3xl;
+  }
+
+  .image-frame::before {
+    content: '';
+    @apply absolute inset-0 z-10;
+    background: var(--gradient-primary);
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+    opacity: 0.8;
   }
 }
 

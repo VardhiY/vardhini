@@ -1,6 +1,6 @@
 import { ArrowRight, Download, Github, Linkedin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profilePicture from "@/assets/vardhini-profile.jpg";
+import profilePicture from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {

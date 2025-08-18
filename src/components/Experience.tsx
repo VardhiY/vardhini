@@ -86,11 +86,6 @@ const Experience = () => {
                     ))}
                   </div>
                 </div>
-
-                <Button variant="outline" className="group">
-                  View Internship Details
-                  <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
               </div>
             </div>
           </div>

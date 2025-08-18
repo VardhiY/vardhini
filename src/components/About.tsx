@@ -74,6 +74,20 @@ const About = () => {
                 <div className="text-sm text-muted-foreground">Internship Experience</div>
               </div>
             </div>
+
+            {/* Achievements */}
+            <div className="space-y-4 pt-8">
+              <h4 className="text-xl font-semibold">Key Achievements</h4>
+              <div className="glass-card rounded-xl p-6">
+                <div className="flex items-center gap-3">
+                  <Award className="w-6 h-6 text-primary" />
+                  <div>
+                    <div className="font-semibold">2nd Prize - Technical Quiz</div>
+                    <div className="text-sm text-muted-foreground">Problem Solving and Analytics Competition</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Education Timeline */}

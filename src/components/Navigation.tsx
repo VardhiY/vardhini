@@ -16,12 +16,11 @@ const Navigation = () => {
   }, []);
 
   const menuItems = [
-    { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#portfolio" },
     { label: "Skills", href: "#skills" },
-    { label: "Services", href: "#services" },
-    { label: "Portfolio", href: "#portfolio" },
+    { label: "Education", href: "#education" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -62,7 +61,7 @@ const Navigation = () => {
               size="sm"
               onClick={() => scrollToSection('#contact')}
             >
-              Let's Connect
+              Get in Touch
             </Button>
           </div>
 
@@ -96,7 +95,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection('#contact')}
                 className="mt-4"
               >
-                Let's Connect
+                Get in Touch
               </Button>
             </div>
           </div>

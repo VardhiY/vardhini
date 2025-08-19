@@ -41,28 +41,16 @@ const About = () => {
 
           <div className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             <p className="mb-6">
-              I am a Data Science student pursuing my 4th year B.Tech with a passion for 
-              turning complex data into actionable insights. My journey in technology is 
-              driven by curiosity and the desire to create solutions that make a real impact.
+              🎯 <strong>Data Science Student</strong> specializing in ML/AI solutions with hands-on experience in web development and problem-solving
+            </p>
+            
+            <p className="mb-6">
+              💡 Built <strong>intelligent applications</strong> including voice-based form filling, AI chatbots, and automated systems during my Infosys Springboard internship
             </p>
             
             <p>
-              I'm passionate about leveraging technology to solve real-world problems and am constantly 
-              exploring new ways to apply machine learning and data science in meaningful applications.
+              🚀 Passionate about transforming complex data into actionable insights and creating technology solutions that drive real business impact
             </p>
-          </div>
-
-          {/* Achievements */}
-          <div className="pt-8">
-            <div className="glass-card rounded-xl p-6 max-w-md mx-auto">
-              <div className="flex items-center gap-3 justify-center">
-                <Award className="w-6 h-6 text-primary" />
-                <div className="text-center">
-                  <div className="font-semibold">2nd Prize - Technical Quiz</div>
-                  <div className="text-sm text-muted-foreground">Problem Solving and Analytics Competition</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

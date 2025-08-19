@@ -1,4 +1,4 @@
-import { Code, Database, Brain, Zap } from "lucide-react";
+import { Code, Database, Brain, Zap, Award } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -28,6 +28,19 @@ const Skills = () => {
     }
   ];
 
+  const certificates = [
+    {
+      name: "Generative AI in Action",
+      issuer: "Professional Certification",
+      color: "from-blue-500 to-indigo-500"
+    },
+    {
+      name: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      color: "from-orange-500 to-yellow-500"
+    }
+  ];
+
   return (
     <section id="skills" className="section-padding relative">
       <div className="container mx-auto">
@@ -35,11 +48,11 @@ const Skills = () => {
           {/* Section Header */}
           <div className="text-center space-y-4">
             <h2 className="text-4xl lg:text-5xl font-display font-bold">
-              Technical <span className="hero-text">Skills</span>
+              Skills & <span className="hero-text">Certificates</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive overview of my technical expertise and proficiency levels
+              Technical expertise, tools, and professional certifications
             </p>
           </div>
 
@@ -70,6 +83,22 @@ const Skills = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Certificates Section */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-semibold text-center">Professional Certificates</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {certificates.map((cert, certIndex) => (
+                <div key={certIndex} className="glass-card rounded-xl p-6 text-center hover:scale-105 transition-all duration-300">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${cert.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="font-semibold text-lg mb-2">{cert.name}</h4>
+                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Key Highlights */}

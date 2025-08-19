@@ -165,21 +165,6 @@ const Portfolio = () => {
                       </div>
                     </div>
 
-                    {/* Project Actions */}
-                    <div className="flex flex-wrap gap-4 pt-4">
-                      <Button variant="hero" className="group">
-                        <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                        View Demo
-                      </Button>
-                      <Button variant="outline" className="group">
-                        <Github className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                        Source Code
-                      </Button>
-                      <Button variant="ghost" className="group">
-                        <ExternalLink className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        Case Study
-                      </Button>
-                    </div>
                   </div>
                 </div>
               </div>

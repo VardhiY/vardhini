@@ -6,49 +6,25 @@ const Skills = () => {
       title: "Programming Languages",
       icon: <Code className="w-6 h-6" />,
       color: "from-primary to-primary/80",
-      skills: [
-        { name: "Python", level: 90 },
-        { name: "Java (DSA)", level: 85 },
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 90 },
-        { name: "JavaScript", level: 80 }
-      ]
+      skills: ["Python", "Java (DSA)", "HTML", "CSS", "JavaScript"]
     },
     {
       title: "Data & ML Libraries",
       icon: <Database className="w-6 h-6" />,
       color: "from-secondary to-secondary/80",
-      skills: [
-        { name: "Pandas", level: 88 },
-        { name: "NumPy", level: 85 },
-        { name: "Matplotlib", level: 80 },
-        { name: "Scikit-learn", level: 75 },
-        { name: "TensorFlow", level: 70 }
-      ]
+      skills: ["Pandas", "NumPy", "Matplotlib", "Scikit-learn", "TensorFlow"]
     },
     {
       title: "Core Expertise",
       icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500",
-      skills: [
-        { name: "Web Development", level: 92 },
-        { name: "Machine Learning", level: 85 },
-        { name: "Data Analysis", level: 88 },
-        { name: "Problem Solving", level: 90 },
-        { name: "UI/UX Design", level: 75 }
-      ]
+      skills: ["Web Development", "Machine Learning", "Data Analysis", "Problem Solving", "UI/UX Design"]
     },
     {
       title: "Tools & Technologies",
       icon: <Zap className="w-6 h-6" />,
       color: "from-yellow-500 to-orange-500",
-      skills: [
-        { name: "Git & GitHub", level: 85 },
-        { name: "VS Code", level: 95 },
-        { name: "Jupyter Notebook", level: 90 },
-        { name: "API Development", level: 80 },
-        { name: "Database Management", level: 75 }
-      ]
+      skills: ["Git & GitHub", "VS Code", "Jupyter Notebook", "API Development", "Database Management"]
     }
   ];
 
@@ -81,20 +57,14 @@ const Skills = () => {
                   </div>
 
                   {/* Skills List */}
-                  <div className="space-y-4">
+                  <div className="flex flex-wrap gap-3">
                     {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <span className="font-medium">{skill.name}</span>
-                          <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div 
-                            className={`h-2 bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 ease-out`}
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
+                      <span 
+                        key={skillIndex} 
+                        className="px-4 py-2 bg-muted hover:bg-muted/80 text-foreground rounded-full text-sm font-medium transition-colors duration-200"
+                      >
+                        {skill}
+                      </span>
                     ))}
                   </div>
                 </div>

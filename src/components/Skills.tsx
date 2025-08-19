@@ -57,24 +57,32 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skillCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="glass-card rounded-2xl p-8 hover:scale-105 transition-all duration-300">
+              <div key={categoryIndex} className="glass-card rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
                 <div className="space-y-6">
-                  {/* Category Header */}
-                  <div className="flex items-center gap-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-white`}>
-                      {category.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold">{category.title}</h3>
+                  {/* Category Icon */}
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center text-white mx-auto`}>
+                    {category.icon}
                   </div>
+                  
+                  {/* Category Title */}
+                  <h3 className="text-xl font-semibold">{category.title}</h3>
+                  
+                  {/* Category Description */}
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {category.title === "Programming Languages" && "Building robust applications with modern programming languages and web technologies."}
+                    {category.title === "Data & ML Libraries" && "Leveraging powerful libraries for data analysis, visualization, and machine learning models."}
+                    {category.title === "Core Expertise" && "Specialized skills in developing intelligent solutions and user-centered designs."}
+                    {category.title === "Tools & Technologies" && "Professional development tools and platforms for efficient project delivery."}
+                  </p>
 
                   {/* Skills List */}
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {category.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex} 
-                        className="px-4 py-2 bg-muted hover:bg-muted/80 text-foreground rounded-full text-sm font-medium transition-colors duration-200"
+                        className="px-3 py-1 bg-muted hover:bg-muted/80 text-foreground rounded-full text-xs font-medium transition-colors duration-200"
                       >
                         {skill}
                       </span>

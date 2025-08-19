@@ -32,7 +32,7 @@ const Hero = () => {
                 <span className="hero-text">Yaddanapudi Vardhini</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground font-medium">
-                Aspiring Data Scientist | Turning Code into Solutions
+                Data Science Student | Web & ML Solutions Enthusiast
               </p>
             </div>
 
